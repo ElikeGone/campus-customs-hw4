@@ -1,0 +1,7 @@
+# Backend dependencies (Python 3.12+). Install from the hw4 folder:
+#   pip install -r requirements.txt
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+pydantic-ai-slim[openai]==2.51.0
+python-dotenv==1.2.3
+pillow==12.3.0

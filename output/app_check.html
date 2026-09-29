@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Customs: App Check (Problem 11)</title>
+<style>
+  body { margin: 0; font-family: system-ui, "Segoe UI", sans-serif; background: #f7f4ec; color: #1a2436; line-height: 1.55; }
+  header { background: #00356b; color: #fff; padding: 1.8rem 1.5rem; }
+  header div, main { max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: Georgia, serif; margin: 0 0 .3rem; }
+  header p { margin: 0; color: #d6e2f2; }
+  main { padding: 1.5rem; }
+  section { background: #fffdf8; border: 1px solid #e2dac8; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.8rem; }
+  h2 { font-family: Georgia, serif; color: #00356b; margin: 0 0 .5rem; }
+  .proof { font-size: 1.02rem; margin: 0 0 1rem; }
+  .proof b { color: #2f7a4b; }
+  img { width: 100%; border: 1px solid #cfc4ad; border-radius: 10px; display: block; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 2rem; color: #5d6778; font-size: .88rem; }
+</style>
+</head>
+<body>
+<header><div>
+  <h1>Campus Customs: Live App Check</h1>
+  <p>Problem 11. Screenshots were taken from the running app (as a guest, in Microsoft Edge at 1440×900). Every price, stock number, and count below was checked against <b>data/campus_customs.db</b>.</p>
+</div></header>
+
+<main>
+  <section>
+    <h2>Check 1: The chatbot gives a real product's price and inventory</h2>
+    <p class="proof">Asked about the Davenport College Crewneck, the assistant replied that it costs <b>$58.00</b>, there are <b>20 in size XL</b>, and <b>size S is out of stock</b>. This matches the database exactly: price 58.0, XL = 20, S = 0.</p>
+    <img src="app_check_images/inventory.png" alt="Chatbot answering the Davenport College Crewneck price and stock">
+  </section>
+
+  <section>
+    <h2>Check 2: Product cards appear dynamically after a category question</h2>
+    <p class="proof">After the shopper asked "What hoodies do you have?", <b>10 clickable hoodie cards</b> (image, name, price) appeared in the chat and in the side panel. Every card is a real catalogue product with its database price, and "27 hoodies" matches the database count.</p>
+    <img src="app_check_images/product_cards.png" alt="Hoodie product cards shown in the chat and side panel">
+  </section>
+
+  <section>
+    <h2>Check 3: Products page search and filters (Problem 9)</h2>
+    <p class="proof">Choosing <b>Hoodies</b>, <b>XS in stock</b>, and <b>Price: low</b> narrowed the page from 102 products to <b>21</b>, with the two $45.00 hoodies first. That matches the database, which has 21 hoodies with XS in stock and $45.00 as the lowest hoodie price.</p>
+    <img src="app_check_images/product_filter.png" alt="Products page filtered to hoodies in XS, sorted by price">
+  </section>
+</main>
+
+<footer>Screenshots are stored in the <b>app_check_images</b> folder next to this file. Keep the two together so the page works on any computer.</footer>
+</body>
+</html>

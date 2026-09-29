@@ -1,0 +1,55 @@
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Local data pack (not committed; see README) ----
+data/
+data.zip
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# ---- Python ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---- Node / frontend build ----
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+*.tsbuildinfo
+
+# ---- Generated caches and temporary files ----
+backend/.image_cache/
+.cache/
+*.tmp
+*.temp
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Editors and OS ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~

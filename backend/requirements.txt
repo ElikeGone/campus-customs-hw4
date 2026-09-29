@@ -1,0 +1,2 @@
+# The dependency list lives in the root requirements.txt; this file just points to it.
+-r ../requirements.txt
